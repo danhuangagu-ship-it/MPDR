@@ -1,9 +1,10 @@
 # MPDR (Machine Learning-based Personalized Dietary Recommendations to Achieve Desired Gut Microbial Compositions)
 This is a Pytorch implementation of DKI, as described in our paper: 
 
-Wang, X.W.#, Dan H.#, Weiss, S.T. and Liu, Y.Y. [Machine Learning-based Personalized Dietary Recommendations to Achieve Desired Gut Microbial Compositions ].
+Wang, X.W.#, Huang D.#, Yu P.F, Weiss, S.T. and Liu, Y.Y. [Machine Learning-based Personalized Dietary Recommendations to Achieve Desired Gut Microbial Compositions ].
 
-<img width="975" height="711" alt="image" src="https://github.com/user-attachments/assets/4c0c2164-b30d-4e97-9571-dea90086dede" />
+
+<img width="975" height="714" alt="image" src="https://github.com/user-attachments/assets/cf1269a9-d522-4ad0-a8d6-d298ba27f9be" />
 
 
 # Contents
@@ -20,8 +21,15 @@ Dietary intervention is an effective way to alter the gut microbiome to promote 
 We have tested this code for Python 3.9.7 and Pytorch 2.1.0.
 
 # Repo Contents
+(1) Python code to predict the species composition using species assemblage and dietary profile (MLP).
+(2) A synthetic dataset to test the Machine Learning-based Personalized Dietary Recommendations (MPDR) framework.
+(3) A real dataset to test the Machine Learning-based Personalized Dietary Recommendations (MPDR) framework.
 
+# Data type for MPDR
 
-# Data type for DPDR
+# How the use the MPDR framework
+Run Python code in "code" folder: "MPDR_mapping.py" by taking p.csv, z.csv and q.csv as input will output the predicted microbiome composition. Example: python DPDR_mapping.py --perturbation $perturbation --'sparsity' $sp --'connectivity' $C --noise $ep --ratio $ratio --fold $fold
 
-# How the use the DPDR framework
+Run Python code in "code" folder: "MPDR_simulation.py" by taking p.csv, z.csv and q.csv as input will output the predicted microbiome composition. Example: python DPDR_mapping.py --perturbation $perturbation --'sparsity' $sp --'connectivity' $C --noise $ep --ratio $ratio --fold $fold
+
+Run Python code in "code" folder: "MPDR_real.py" by taking p.csv, z.csv and q.csv as input will output the predicted microbiome composition. Example: python DPDR_mapping.py --perturbation $perturbation --'sparsity' $sp --'connectivity' $C --noise $ep --ratio $ratio --fold $fold
