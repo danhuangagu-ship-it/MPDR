@@ -11,7 +11,6 @@ Wang, X.W.#, Huang D.#, Yu P.F, Weiss, S.T. and Liu, Y.Y. [Machine Learning-base
 Overview
 Environment
 Repo Contents
-Data type for MPDR
 How the use the MPDR framework
 
 # Overview
@@ -26,9 +25,6 @@ We have tested this code for Python 3.9.7 and Pytorch 2.1.0.
 (2) A synthetic dataset to test the Machine Learning-based Personalized Dietary Recommendations (MPDR) framework.
 
 (3) A real dataset to test the Machine Learning-based Personalized Dietary Recommendations (MPDR) framework.
-
-# Data type for MPDR
-
 
 # How the use the MPDR framework
 
