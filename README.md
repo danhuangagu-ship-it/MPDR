@@ -22,14 +22,15 @@ We have tested this code for Python 3.9.7 and Pytorch 2.1.0.
 
 # Repo Contents
 (1) Python code to predict the species composition using species assemblage and dietary profile (MLP).
+
 (2) A synthetic dataset to test the Machine Learning-based Personalized Dietary Recommendations (MPDR) framework.
+
 (3) A real dataset to test the Machine Learning-based Personalized Dietary Recommendations (MPDR) framework.
 
 # Data type for MPDR
 
 # How the use the MPDR framework
-Run Python code in "code" folder: "MPDR_mapping.py" by taking p.csv, z.csv and q.csv as input will output the predicted microbiome composition. Example: python DPDR_mapping.py --perturbation $perturbation --'sparsity' $sp --'connectivity' $C --noise $ep --ratio $ratio --fold $fold
 
-Run Python code in "code" folder: "MPDR_simulation.py" by taking p.csv, z.csv and q.csv as input will output the predicted microbiome composition. Example: python DPDR_mapping.py --perturbation $perturbation --'sparsity' $sp --'connectivity' $C --noise $ep --ratio $ratio --fold $fold
+Run the Python script MPDR_simulated_community.py in "code" folder：The model is trained using p_train.csv, z_train.csv, and q_train.csv to learn a mapping for microbiome composition prediction. For diet recommendation, p_desired.csv, z_start.csv, and q_perm.csv are provided as inputs to optimize personalized diets. Users can directly replace the input CSV files with their own datasets, as long as the formats are consistent, with each row representing one sample. Example: python MPDR_simulated_community.py --p_train ./data/p_healthy_0.1_0.01_0.2_0_5_1.csv --z_train data/z_healthy_0.1_0.01_0.2_0_5_1.csv --q_train ./data/q_healthy_0.1_0.01_0.2_0_5_1.csv --p_target  ./data/p_disease_0.1_0.01_0.2_0_5_1.csv --z_start ./data/z_disease_0.1_0.01_0.2_0_5_1.csv --q_start  ./data/q_disease_perm_0.1_0.01_0.2_0_5_1.csv --out_dir ./results --tag MPDR_test
 
-Run Python code in "code" folder: "MPDR_real.py" by taking p.csv, z.csv and q.csv as input will output the predicted microbiome composition. Example: python DPDR_mapping.py --perturbation $perturbation --'sparsity' $sp --'connectivity' $C --noise $ep --ratio $ratio --fold $fold
+Run Python code in "code" folder: "MPDR.py" by taking p_desired.csv, z_start.csv, and q_perm.csv as input will output the optimize personalized diets. Example: python MPDR.py python MPDR.py --model_path ./MPDR_model.pt --z_start ./data/DMAS_z_disease.csv --q_start ./data/DMAS_q_disease_random.csv --p_target ./data/DMAS_p_disease_desired.csv --out_dir ./results
