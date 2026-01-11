@@ -29,6 +29,7 @@ We have tested this code for Python 3.9.7 and Pytorch 2.1.0.
 
 # Data type for MPDR
 
+
 # How the use the MPDR framework
 
 Users can directly replace the input CSV files with their own datasets, as long as the formats are consistent, with each row representing one sample. Run the Python script MPDR_simulated_community.py in "code" folder：The model is trained using p_train.csv, z_train.csv, and q_train.csv to learn a mapping for microbiome composition prediction. For diet recommendation, p_desired.csv, z_start.csv, and q_start.csv are provided as inputs to optimize personalized diets. Example: python MPDR_simulated_community.py --p_train ./data/p_healthy_0.1_0.01_0.2_0_5_1.csv --z_train data/z_healthy_0.1_0.01_0.2_0_5_1.csv --q_train ./data/q_healthy_0.1_0.01_0.2_0_5_1.csv --p_target  ./data/p_disease_0.1_0.01_0.2_0_5_1.csv --z_start ./data/z_disease_0.1_0.01_0.2_0_5_1.csv --q_start  ./data/q_disease_perm_0.1_0.01_0.2_0_5_1.csv --out_dir ./results --tag MPDR_test
