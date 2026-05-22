@@ -38,7 +38,6 @@ pip install -r requirements.txt
 ```
 ##Step 3. Run the example
 ```bash
-wget XX
 python code/MPDR.py \
 --model_path ./MPDR_model.pt \
 --z_start ./data/DMAS_z_disease.csv \
@@ -46,4 +45,27 @@ python code/MPDR.py \
 --p_target ./data/DMAS_p_disease_desired.csv \
 --out_dir ./results
 ```
+#Advanced Usage: Retraining MPDR with Custom Data
+Users can retrain MPDR using their own datasets, provided that the input formats remain consistent.
 
+Training requires:
+p_train.csv
+z_train.csv
+q_train.csv
+Diet optimization additionally requires:
+p_target.csv
+z_start.csv
+q_start.csv
+
+Example:
+```bash
+python code/MPDR_simulated_community_test.py \
+--p_train ./data/train/p_healthy.csv \
+--z_train ./data/train/z_healthy.csv \
+--q_train ./data/train/q_healthy.csv \
+--p_target ./data/train/train_p_disease_desired.csv \
+--z_start ./data/train/z_disease.csv \
+--q_start ./data/train/train_q_disease_random.csv \
+--out_dir ./results/train \
+--tag MPDR_train
+```
