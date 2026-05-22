@@ -60,11 +60,11 @@ q_start.csv
 Example:
 ```bash
 python code/MPDR_simulated_community_test.py \
---p_train ./data/train/p_healthy.csv \
---z_train ./data/train/z_healthy.csv \
---q_train ./data/train/q_healthy.csv \
---p_target ./data/train/train_p_disease_desired.csv \
---z_start ./data/train/z_disease.csv \
+--p_train ./data/train/train_p_healthy.csv \
+--z_train ./data/train/train_z_healthy.csv \
+--q_train ./data/train/train_q_healthy.csv \
+--p_target ./data/train/train_train_p_disease_desired.csv \
+--z_start ./data/train/train_z_disease.csv \
 --q_start ./data/train/train_q_disease_random.csv \
 --out_dir ./results/train \
 --tag MPDR_train
